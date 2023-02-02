@@ -1,0 +1,54 @@
+name: tab_router_example
+description: tab_router_example
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.0 <3.0.0'
+  flutter: '>=3.7.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  collection: ^1.17.0
+  meta: ^1.7.0
+  intl: ^0.17.0
+  l: ^3.2.0
+  path: ^1.8.2
+  shared_preferences: ^2.0.16
+  tab_router:
+    path: packages/tab_router
+  photo_view: ^0.14.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  dart_code_metrics: ^5.2.1
+  build: ^2.0.0
+  build_runner: ^2.0.2
+  build_test: ^2.0.0
+  flutter_gen_runner: any
+  pubspec_generator: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/data/
+    - assets/images/
+
+flutter_intl:
+  enabled: true
+  class_name: GeneratedLocalization
+  main_locale: en
+  arb_dir: lib/src/common/localization
+  output_dir: lib/src/common/localization/generated
+  use_deferred_loading: false
+
+flutter_gen:
+  output: lib/src/common/constant/
+  line_length: 120
